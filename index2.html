@@ -1,126 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIY Furniture Tips</title>
-<style>
-    body, html {
-        height: 100%;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-    }
-    .card {
-        background-color: #fff;
-        margin: 10px;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        width: calc(33.333% - 20px);
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-    .card:hover {
-        transform: translateY(-5px);
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.4);
-    }
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-        max-width: 600px;
-    }
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    @media (max-width: 768px) {
-        .card {
-            width: calc(50% - 20px);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Furniture Tips</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
-    }
-    @media (max-width: 480px) {
+        
         .card {
-            width: calc(100% - 20px);
+            background-color: #fff;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(33.333% - 20px);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
         }
-    }
-</style>
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Card Section -->
-<div class="card" onclick="openModal('modal1')">
-    <h2>Start Small</h2>
-    <p>Begin with simple projects like building a birdhouse or a coffee table.</p>
-</div>
-
-<div class="card" onclick="openModal('modal2')">
-    <h2>Plan Ahead</h2>
-    <p>Make a detailed plan and budget before starting your project.</p>
-</div>
-
-<!-- More cards here -->
-
-<!-- Modal Section -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <!-- Card Section -->
+    <div class="card" onclick="openModal('modal1')">
         <h2>Start Small</h2>
-        <p>Example: Building a simple wooden coffee table using basic tools.</p>
+        <p>Begin with simple projects like building a birdhouse or a coffee table.</p>
     </div>
-</div>
 
-<div id="modal2" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <div class="card" onclick="openModal('modal2')">
         <h2>Plan Ahead</h2>
-        <p>Example: Creating a detailed drawing and itemized list of materials for a bookshelf.</p>
+        <p>Make a detailed plan and budget before starting your project.</p>
     </div>
-</div>
+    <div class="card" onclick="openModal('modal3')">
+        <h2>Choose the right materials</h2>
+        <p>Select materials that fit your skill level and budget. Consider sustainability and durability.</p>
+    </div>
 
-<!-- More modals here -->
+    <!-- More cards here -->
 
-<script>
-function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = 'block';
-}
+    <!-- Modal Section -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Start Small</h2>
+            <p>Example: Building a simple wooden coffee table using basic tools.</p>
+        </div>
+    </div>
 
-function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = 'none';
-}
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Plan Ahead</h2>
+            <p>Example: Creating a detailed drawing and itemized list of materials for a bookshelf.</p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Choose the right materials</h2>
+            <p>Example: Selecting pine wood or poplar for a beginner's project due to its affordability and ease of use. For more advanced projects, hardwoods like oak or maple could be used for their durability and aesthetics</p>
+        </div>
+    </div>
 
-window.onclick = function(event) {
-    var modals = document.querySelectorAll('.modal');
-    modals.forEach(function(modal) {
-        if (event.target == modal) {
+    <!-- More modals here -->
+
+    <script>
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
             modal.style.display = 'none';
         }
-    });
-}
-</script>
+
+        window.onclick = function(event) {
+            var modals = document.querySelectorAll('.modal');
+            modals.forEach(function(modal) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
+
 </html>
